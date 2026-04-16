@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: -30px;
+}
+
+.logo img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+}
+
+.navli {
+    justify-content: space-between;
+    padding: 3.5vh;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #39ff14;
+}
+
+#quote {
+    margin-left: 60vw;
+    color: #39ff14;
+    font-size: 5rem;
+}
+
+#faq {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+#faqtext {
+    width: fit-content;
+    border: solid 0.6vw #39ff14;
+    margin: 0 auto;
+    margin-top: 5vh;
+    border-radius: 2vw;
+    padding: 1vw;
+    font-family: Arial, sans-serif;
+    border: wrap;
+    margin: 30px;
+    padding: 20px;
+    font-size: 2rem;
+
+}
+
+.hero {
+    height: 100vh;
+    background: url("../pictures/lucidglock.gif") no-repeat center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+}
+
+
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #39ff14;
+    border: 2px solid #39ff14;
+    background: #0d0e0d;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(10px);
+    box-shadow: 0 0 20px #39ff14;
+    background: #39ff14;
+    color: black;
+}
+
+.youtube-button {
+    padding: 20px 35px;
+    background: #0d0e0d;
+    color: #39ff14;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-left: auto;
+    display: inline-block;
+    position: relative;
+    border: solid 3px;
+}
+
+.youtube-button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #39ff14;
+    transition: 0.3s;
+}
+
+
+.team {
+    
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 20px;
+}
+
+.players {
+    padding: 100px 10%;
+}
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    min-height: 120px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #39ff14;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.player-grid a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.videos-page {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.videos-page h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50vh;
+    max-width: 700px; 
+    margin: 40px auto 0 auto; 
+}
+
+
+.video-card {
+    background: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 4px solid transparent;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+    border-color: #39ff14;
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 10px;
+    display: block;
+    border: none;
+}
+
+.video-card h3 {
+    margin-top: 10px;
+}
+
+.centered {
+    text-align: center;
+    color: #39ff14;
+}
+
+#videos {
+    display: none;
+    padding: 140px 10% 100px;
+    margin-top: 20px;
+    color: #39ff14;
+}
+
+
+
+/* All this below is MOBILE shit dont touch until speaking to Serbian king von aka Nikola */
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 200px;
+    }
+
+    .youtube-button {
+        top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 12px 20px;
+        min-height: 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(12px);
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navli {
+        padding: 0;
+    }
+
+    .logo {
+    display: flex;
+    flex-direction: center;
+    justify-content: last baseline;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.1;
+    }
+}
