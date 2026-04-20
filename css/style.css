@@ -335,6 +335,7 @@ section {
     color: #39ff14;
 }
 
+
 /* All this below is MOBILE shit dont touch until speaking to Serbian king von aka Nikola */
 
 @media (max-width: 768px) {
@@ -431,5 +432,17 @@ section {
 
     .video-card iframe {
         height: 220px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 20px 15px;
+        margin-top: 50px;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 }
